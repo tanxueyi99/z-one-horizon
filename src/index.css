@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@utility nav-petal {
+  width: 40px; /* control size */
+  aspect-ratio: 2.28 / 4.225; /* keeps proportions */
+  background: red;
+  clip-path: path(
+    "M 99 72 Q 95 91 50 91 Q 5 91 1 72 Q -7 44 30 0 Q 50 -10 70 0 Q 107 44 99 72 Z"
+  );
+}
+
+@utility nav-ring {
+  width: 150px;
+  height: 150px;
+  border: 25px solid #1abc9c;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* display: block;
+  width: 126px;
+  height: 180px;
+  background-color: red;
+
+  border-radius: 40% 40% 60% 60% / 5% 5% 75% 75%; */
+
+/* @utility teardrop {
+  width: 160px;
+  height: 230px;
+  background: #e46608;
+
+  -webkit-clip-path: path(
+    "M50 0
+     C25 15, 10 50, 50 100
+     C90 50, 75 15, 50 0
+     Z"
+  );
+  clip-path: path(
+    "M50 0
+     C25 15, 10 50, 50 100
+     C90 50, 75 15, 50 0
+     Z"
+  );
+} */
