@@ -10,9 +10,9 @@
 }
 
 @utility nav-ring {
-  width: 150px;
-  height: 150px;
-  border: 25px solid #1abc9c;
+  width: 190px;
+  height: 190px;
+  border: 14px solid #1abc9c;
   border-radius: 50%;
   box-sizing: border-box;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 4px 8px rgba(0, 0, 0, 0.1);
