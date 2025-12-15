@@ -14,7 +14,7 @@ function TopNavigation() {
               alt="LeftLogo"
               onClick={() => alert("Logo")}
             />
-            <div className="text-6xl font-amiri pt-5 neon-glow text-orange-glass">
+            <div className="text-6xl font-amiri pt-5 neon-glow text-orange-glass-text">
               Spirit
             </div>
             <img

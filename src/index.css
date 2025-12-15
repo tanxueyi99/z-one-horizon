@@ -4,94 +4,299 @@
 
 @theme {
   --font-amiri: "Amiri", serif;
-  /* --color-initial-glow: #ff005e; */
-  /* --color-after-glow: #00d4ff; */
-  --color-orange-glass: hsla(64, 86%, 79%, 1);
-  /* --color-initial-glow: hsl(64, 86%, 49%); */
+
+  --color-orange-glass-text: hsla(64, 86%, 79%, 1);
+  --color-blue-glass-text: hsla(208, 99%, 79%, 1);
+  --color-green-glass-text: hsla(126, 100%, 79%, 1);
+
   --color-initial-glow: hsla(64, 86%, 49%, 1);
-  /* --color-after-glow: hsl(64, 86%, 49%); */
   --color-after-glow: hsla(64, 86%, 55%, 1);
 
-  --color-blue-glass: #017AE7;
-  --color-green-glass: #00E717;
+  --color-orange-start-glow: hsla(64, 86%, 49%, 1);
+  --color-orange-end-glow: hsla(64, 86%, 55%, 1);
+
+  --color-blue-start-glow: hsla(208, 99%, 49%, 1);
+  --color-blue-end-glow: hsla(208, 99%, 55%, 1);
+
+  --color-green-start-glow: hsla(126, 100%, 49%, 1);
+  --color-green-end-glow: hsla(126, 100%, 55%, 1);
+
+  --color-orange-glass: #d7e711;
+  --color-blue-glass: #017ae7;
+  --color-green-glass: #00e717;
 }
 
-@utility neon-glow {
-  text-shadow: 0 0 5px var(--color-initial-glow),
-    0 0 10px var(--color-initial-glow), 0 0 20px var(--color-initial-glow),
-    0 0 40px var(--color-initial-glow), 0 0 80px var(--color-initial-glow);
-  animation: glow 1s infinite alternate;
+@utility neon-glow-orange {
+  text-shadow: 0 0 5px var(--color-orange-start-glow),
+    0 0 10px var(--color-orange-start-glow),
+    0 0 20px var(--color-orange-start-glow),
+    0 0 40px var(--color-orange-start-glow),
+    0 0 80px var(--color-orange-start-glow);
+  animation: glow-orange 1s infinite alternate;
 }
 
-@keyframes glow {
+@keyframes glow-orange {
   0% {
-    text-shadow: 0 0 5px var(--color-initial-glow),
-      0 0 10px var(--color-initial-glow), 0 0 20px var(--color-initial-glow),
-      0 0 40px var(--color-initial-glow), 0 0 80px var(--color-initial-glow);
+    text-shadow: 0 0 5px var(--color-orange-start-glow),
+      0 0 10px var(--color-orange-start-glow),
+      0 0 20px var(--color-orange-start-glow),
+      0 0 40px var(--color-orange-start-glow),
+      0 0 80px var(--color-orange-start-glow);
   }
   100% {
-    text-shadow: 0 0 10px var(--color-after-glow),
-      0 0 20px var(--color-after-glow), 0 0 40px var(--color-after-glow),
-      0 0 80px var(--color-after-glow), 0 0 160px var(--color-after-glow);
+    text-shadow: 0 0 10px var(--color-orange-end-glow),
+      0 0 20px var(--color-orange-end-glow),
+      0 0 40px var(--color-orange-end-glow),
+      0 0 80px var(--color-orange-end-glow),
+      0 0 160px var(--color-orange-end-glow);
   }
 }
 
-@utility image-neon-color {
-  filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
-    hue-rotate(24deg) brightness(104%) contrast(93%);
+@utility neon-glow-blue {
+  text-shadow: 0 0 5px var(--color-blue-start-glow),
+    0 0 10px var(--color-blue-start-glow), 0 0 20px var(--color-blue-start-glow),
+    0 0 40px var(--color-blue-start-glow), 0 0 80px var(--color-blue-start-glow);
+  animation: glow-blue 1s infinite alternate;
 }
 
-@utility image-neon-glow {
+@keyframes glow-blue {
+  0% {
+    text-shadow: 0 0 5px var(--color-blue-start-glow),
+      0 0 10px var(--color-blue-start-glow),
+      0 0 20px var(--color-blue-start-glow),
+      0 0 40px var(--color-blue-start-glow),
+      0 0 80px var(--color-blue-start-glow);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--color-blue-end-glow),
+      0 0 20px var(--color-blue-end-glow), 0 0 40px var(--color-blue-end-glow),
+      0 0 80px var(--color-blue-end-glow), 0 0 160px var(--color-blue-end-glow);
+  }
+}
+
+@utility neon-glow-green {
+  text-shadow: 0 0 5px var(--color-green-start-glow),
+    0 0 10px var(--color-green-start-glow),
+    0 0 20px var(--color-green-start-glow),
+    0 0 40px var(--color-green-start-glow),
+    0 0 80px var(--color-green-start-glow);
+  animation: glow-green 1s infinite alternate;
+}
+
+@keyframes glow-green {
+  0% {
+    text-shadow: 0 0 5px var(--color-green-start-glow),
+      0 0 10px var(--color-green-start-glow),
+      0 0 20px var(--color-green-start-glow),
+      0 0 40px var(--color-green-start-glow),
+      0 0 80px var(--color-green-start-glow);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--color-green-end-glow),
+      0 0 20px var(--color-green-end-glow), 0 0 40px var(--color-green-end-glow),
+      0 0 80px var(--color-green-end-glow),
+      0 0 160px var(--color-green-end-glow);
+  }
+}
+
+/* @utility image-neon-color {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
+    hue-rotate(24deg) brightness(104%) contrast(93%);
+} */
+
+@utility image-neon-glow-orange {
   filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
     hue-rotate(24deg) brightness(104%) contrast(93%)
-    drop-shadow(0 0 2px var(--color-initial-glow))
-    drop-shadow(0 0 5px var(--color-initial-glow))
-    drop-shadow(0 0 10px var(--color-initial-glow));
+    drop-shadow(0 0 2px var(--color-orange-start-glow))
+    drop-shadow(0 0 5px var(--color-orange-start-glow))
+    drop-shadow(0 0 10px var(--color-orange-start-glow));
   animation: image-glow 1s infinite alternate;
 }
 
-@keyframes image-glow {
+@keyframes image-glow-orange {
   0% {
     filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
       hue-rotate(24deg) brightness(104%) contrast(93%)
+      drop-shadow(0 0 2px var(--color-orange-start-glow))
+      drop-shadow(0 0 6px var(--color-orange-start-glow));
+  }
+  100% {
+    filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
+      hue-rotate(24deg) brightness(104%) contrast(93%)
+      drop-shadow(0 0 3px var(--color-orange-end-glow))
+      drop-shadow(0 0 7px var(--color-orange-end-glow));
+  }
+}
+
+@utility image-neon-glow-blue {
+  filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(3253%)
+    hue-rotate(196deg) brightness(99%) contrast(98%)
+    drop-shadow(0 0 2px var(--color-blue-start-glow))
+    drop-shadow(0 0 5px var(--color-blue-start-glow))
+    drop-shadow(0 0 10px var(--color-blue-start-glow));
+  animation: image-glow-blue 1s infinite alternate;
+}
+
+@keyframes image-glow-blue {
+  0% {
+    filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(3253%)
+      hue-rotate(196deg) brightness(99%) contrast(98%)
+      drop-shadow(0 0 2px var(--color-blue-start-glow))
+      drop-shadow(0 0 6px var(--color-blue-start-glow));
+  }
+  100% {
+    filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(3253%)
+      hue-rotate(196deg) brightness(99%) contrast(98%)
+      drop-shadow(0 0 3px var(--color-blue-end-glow))
+      drop-shadow(0 0 7px var(--color-blue-end-glow));
+  }
+}
+
+@utility image-neon-glow-green {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(98%) saturate(2595%)
+    hue-rotate(92deg) brightness(98%) contrast(119%)
+    drop-shadow(0 0 2px var(--color-green-start-glow))
+    drop-shadow(0 0 5px var(--color-green-start-glow))
+    drop-shadow(0 0 10px var(--color-green-start-glow));
+  animation: image-glow-green 1s infinite alternate;
+}
+
+@keyframes image-glow-green {
+  0% {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(98%) saturate(2595%)
+      hue-rotate(92deg) brightness(98%) contrast(119%)
+      drop-shadow(0 0 2px var(--color-green-start-glow))
+      drop-shadow(0 0 6px var(--color-green-start-glow));
+  }
+  100% {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(98%) saturate(2595%)
+      hue-rotate(92deg) brightness(98%) contrast(119%)
+      drop-shadow(0 0 3px var(--color-green-end-glow))
+      drop-shadow(0 0 7px var(--color-green-end-glow));
+  }
+}
+
+/* petal */
+
+@utility petal-neon-glow {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(55%) saturate(1821%)
+    hue-rotate(14deg) brightness(102%) contrast(94%)
+    drop-shadow(0 0 2px var(--color-initial-glow))
+    drop-shadow(0 0 5px var(--color-initial-glow))
+    drop-shadow(0 0 10px var(--color-initial-glow));
+  animation: petal-glow 1s infinite alternate;
+}
+
+@keyframes petal-glow {
+  0% {
+    filter: brightness(0) saturate(100%) invert(88%) sepia(55%) saturate(1821%)
+      hue-rotate(14deg) brightness(102%) contrast(94%)
       drop-shadow(0 0 2px var(--color-initial-glow))
       drop-shadow(0 0 6px var(--color-initial-glow));
   }
   100% {
-    filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
-      hue-rotate(24deg) brightness(104%) contrast(93%)
+    filter: brightness(0) saturate(100%) invert(88%) sepia(55%) saturate(1821%)
+      hue-rotate(14deg) brightness(102%) contrast(94%)
       drop-shadow(0 0 3px var(--color-after-glow))
       drop-shadow(0 0 7px var(--color-after-glow));
   }
 }
 
-/* @keyframes image-glow {
-  0% {
-    filter: drop-shadow(0 0 5px var(--color-initial-glow))
-      drop-shadow(0 0 10px var(--color-initial-glow))
-      drop-shadow(0 0 20px var(--color-initial-glow))
-      drop-shadow(0 0 40px var(--color-initial-glow));
-  }
-  100% {
-    filter: drop-shadow(0 0 10px var(--color-after-glow))
-      drop-shadow(0 0 20px var(--color-after-glow))
-      drop-shadow(0 0 40px var(--color-after-glow))
-      drop-shadow(0 0 80px var(--color-after-glow));
-  }
-} */
+@utility petal-neon-glow-orange {
+  --color-initial-glow: #d7e711;
+  --color-after-glow: #d7e711;
+  filter: brightness(0) saturate(100%) invert(88%) sepia(55%) saturate(1821%)
+    hue-rotate(14deg) brightness(102%) contrast(94%)
+    drop-shadow(0 0 2px var(--color-initial-glow))
+    drop-shadow(0 0 5px var(--color-initial-glow))
+    drop-shadow(0 0 10px var(--color-initial-glow));
+  animation: petal-glow-orange 1s infinite alternate;
+}
 
-/* @keyframes glow {
+@keyframes petal-glow-orange {
   0% {
-    text-shadow: 0 0 5px var(--color-initial-glow),
-      0 0 10px var(--color-initial-glow), 0 0 20px var(--color-initial-glow),
-      0 0 40px var(--color-initial-glow), 0 0 80px var(--color-initial-glow);
+    filter: brightness(0) saturate(100%) invert(88%) sepia(55%) saturate(1821%)
+      hue-rotate(14deg) brightness(102%) contrast(94%)
+      drop-shadow(0 0 2px #d7e711) drop-shadow(0 0 6px #d7e711);
   }
   100% {
-    text-shadow: 0 0 10px var(--color-after-glow),
-      0 0 20px var(--color-after-glow), 0 0 40px var(--color-after-glow),
-      0 0 80px var(--color-after-glow), 0 0 160px var(--color-after-glow);
+    filter: brightness(0) saturate(100%) invert(88%) sepia(55%) saturate(1821%)
+      hue-rotate(14deg) brightness(102%) contrast(94%)
+      drop-shadow(0 0 3px #d7e711) drop-shadow(0 0 7px #d7e711);
   }
-} */
+}
+
+@utility petal-neon-glow-blue {
+  --color-initial-glow: #017ae7;
+  --color-after-glow: #017ae7;
+  filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(3253%)
+    hue-rotate(196deg) brightness(99%) contrast(98%)
+    drop-shadow(0 0 2px var(--color-initial-glow))
+    drop-shadow(0 0 5px var(--color-initial-glow))
+    drop-shadow(0 0 10px var(--color-initial-glow));
+  animation: petal-glow-blue 1s infinite alternate;
+}
+
+@keyframes petal-glow-blue {
+  0% {
+    filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(3253%)
+      hue-rotate(196deg) brightness(99%) contrast(98%)
+      drop-shadow(0 0 2px #017ae7) drop-shadow(0 0 6px #017ae7);
+  }
+  100% {
+    filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(3253%)
+      hue-rotate(196deg) brightness(99%) contrast(98%)
+      drop-shadow(0 0 3px #017ae7) drop-shadow(0 0 7px #017ae7);
+  }
+}
+
+@utility petal-neon-glow-green {
+  --color-initial-glow: #00e717;
+  --color-after-glow: #00e717;
+  filter: brightness(0) saturate(100%) invert(56%) sepia(98%) saturate(2595%)
+    hue-rotate(92deg) brightness(98%) contrast(119%)
+    drop-shadow(0 0 2px var(--color-initial-glow))
+    drop-shadow(0 0 5px var(--color-initial-glow))
+    drop-shadow(0 0 10px var(--color-initial-glow));
+  animation: petal-glow-green 1s infinite alternate;
+}
+
+@keyframes petal-glow-green {
+  0% {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(98%) saturate(2595%)
+      hue-rotate(92deg) brightness(98%) contrast(119%)
+      drop-shadow(0 0 2px #00e717) drop-shadow(0 0 6px #00e717);
+  }
+  100% {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(98%) saturate(2595%)
+      hue-rotate(92deg) brightness(98%) contrast(119%)
+      drop-shadow(0 0 3px #00e717) drop-shadow(0 0 7px #00e717);
+  }
+}
+
+@utility petal-neon-glow-ring {
+  --color-initial-glow: #c3c3c3;
+  --color-after-glow: #c3c3c3;
+  filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(96%) contrast(88%)
+    drop-shadow(0 0 2px var(--color-initial-glow))
+    drop-shadow(0 0 5px var(--color-initial-glow))
+    drop-shadow(0 0 10px var(--color-initial-glow));
+  animation: petal-glow-ring 1s infinite alternate;
+}
+
+@keyframes petal-glow-ring {
+  0% {
+    filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(0%)
+      hue-rotate(0deg) brightness(96%) contrast(88%)
+      drop-shadow(0 0 2px #c3c3c3) drop-shadow(0 0 6px #c3c3c3);
+  }
+  100% {
+    filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(0%)
+      hue-rotate(0deg) brightness(96%) contrast(88%)
+      drop-shadow(0 0 3px #c3c3c3) drop-shadow(0 0 7px #c3c3c3);
+  }
+}
 
 @utility nav-petal {
   width: 40px; /* control size */

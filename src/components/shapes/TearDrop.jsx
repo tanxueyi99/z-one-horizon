@@ -11,8 +11,8 @@ function TearDrop(props) {
         <path
           d="m -0.9 3.2 q -0.1 0.8 -1.1 0.8 q -1 0 -1.1 -0.8 q -0.2 -1.2 0.6 -2.95 q 0.5 -0.95 1 0 q 0.8 1.75 0.6 2.95"
           fill="#000000"
+          // id={props.fill}
           className={`${props.fill || "#000000"}`}
-          // className="fill-[var(--color-initial-glow)]"
         />
       </svg>
     </>
