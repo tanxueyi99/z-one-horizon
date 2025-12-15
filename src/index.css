@@ -11,6 +11,9 @@
   --color-initial-glow: hsla(64, 86%, 49%, 1);
   /* --color-after-glow: hsl(64, 86%, 49%); */
   --color-after-glow: hsla(64, 86%, 55%, 1);
+
+  --color-blue-glass: #017AE7;
+  --color-green-glass: #00E717;
 }
 
 @utility neon-glow {

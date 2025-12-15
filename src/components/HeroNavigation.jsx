@@ -56,13 +56,19 @@ function HeroNavigation() {
                 className="absolute rotate-120"
                 onClick={() => handleBlueTearClick()}
               >
-                <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
+                <TearDrop
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64"
+                  fill="fill-[var(--color-blue-glass)]"
+                />
               </div>
               <div
                 className="absolute rotate-240"
                 onClick={() => handleGreenTearClick()}
               >
-                <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
+                <TearDrop
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64"
+                  fill="fill-[var(--color-green-glass)]"
+                />
               </div>
             </div>
           </div>
