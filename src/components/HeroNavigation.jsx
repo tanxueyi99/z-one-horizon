@@ -3,32 +3,71 @@ import TearDrop from "./shapes/TearDrop";
 import HeroContainer from "./utility/HeroContainer";
 import TopNavigation from "./TopNavigation";
 import "animate.css";
+import { use, useState } from "react";
 
 function HeroNavigation() {
+  const [isOrange, SetIsOrange] = useState(true);
+  const [isGreen, SetIsGreen] = useState(false);
+  const [isBlue, SetIsBlue] = useState(false);
+
+  // function handleRotatingNavigation() {
+  //   alert("Tear clicked!");
+  // }
+
+  function handleOrangeTearClick() {
+    SetIsOrange(true);
+    SetIsGreen(false);
+    SetIsBlue(false);
+    alert("Orange Tear clicked!");
+  }
+
+  function handleGreenTearClick() {
+    SetIsOrange(false);
+    SetIsGreen(true);
+    SetIsBlue(false);
+    alert("Green Tear clicked!");
+  }
+
+  function handleBlueTearClick() {
+    SetIsOrange(false);
+    SetIsGreen(false);
+    SetIsBlue(true);
+    alert("Blue Tear clicked!");
+  }
+
   return (
     <>
       <HeroContainer>
         <TopNavigation />
         <div className="flex h-screen bg-blue-400 -z-10">
-          <div className="w-[50vw] flex items-center justify-center">
-            <div className="flex items-center justify-center  w-100 h-100 m-10 pt-30">
+          <div className="w-1/2 flex items-center justify-center pt-30">
+            <div className="flex items-center justify-center">
               <div className="absolute">
                 <div className="nav-ring"></div>
               </div>
 
-              <div className="absolute">
+              <div className="absolute" onClick={() => handleOrangeTearClick()}>
+                <TearDrop
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64"
+                  fill="fill-[var(--color-orange-glass)]"
+                />
+              </div>
+              <div
+                className="absolute rotate-120"
+                onClick={() => handleBlueTearClick()}
+              >
                 <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
               </div>
-              <div className="absolute rotate-120">
-                <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
-              </div>
-              <div className="absolute rotate-240">
+              <div
+                className="absolute rotate-240"
+                onClick={() => handleGreenTearClick()}
+              >
                 <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
               </div>
             </div>
           </div>
 
-          <div className=" w-[50vw]"></div>
+          <div className="bg-blue-900 w-1/2"></div>
         </div>
 
         <svg
