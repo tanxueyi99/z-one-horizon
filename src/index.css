@@ -1,4 +1,94 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-amiri: "Amiri", serif;
+  /* --color-initial-glow: #ff005e; */
+  /* --color-after-glow: #00d4ff; */
+  --color-orange-glass: hsla(64, 86%, 79%, 1);
+  /* --color-initial-glow: hsl(64, 86%, 49%); */
+  --color-initial-glow: hsla(64, 86%, 49%, 1);
+  /* --color-after-glow: hsl(64, 86%, 49%); */
+  --color-after-glow: hsla(64, 86%, 55%, 1);
+}
+
+@utility neon-glow {
+  text-shadow: 0 0 5px var(--color-initial-glow),
+    0 0 10px var(--color-initial-glow), 0 0 20px var(--color-initial-glow),
+    0 0 40px var(--color-initial-glow), 0 0 80px var(--color-initial-glow);
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px var(--color-initial-glow),
+      0 0 10px var(--color-initial-glow), 0 0 20px var(--color-initial-glow),
+      0 0 40px var(--color-initial-glow), 0 0 80px var(--color-initial-glow);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--color-after-glow),
+      0 0 20px var(--color-after-glow), 0 0 40px var(--color-after-glow),
+      0 0 80px var(--color-after-glow), 0 0 160px var(--color-after-glow);
+  }
+}
+
+@utility image-neon-color {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
+    hue-rotate(24deg) brightness(104%) contrast(93%);
+}
+
+@utility image-neon-glow {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
+    hue-rotate(24deg) brightness(104%) contrast(93%)
+    drop-shadow(0 0 2px var(--color-initial-glow))
+    drop-shadow(0 0 5px var(--color-initial-glow))
+    drop-shadow(0 0 10px var(--color-initial-glow));
+  animation: image-glow 1s infinite alternate;
+}
+
+@keyframes image-glow {
+  0% {
+    filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
+      hue-rotate(24deg) brightness(104%) contrast(93%)
+      drop-shadow(0 0 2px var(--color-initial-glow))
+      drop-shadow(0 0 6px var(--color-initial-glow));
+  }
+  100% {
+    filter: brightness(0) saturate(100%) invert(95%) sepia(13%) saturate(1345%)
+      hue-rotate(24deg) brightness(104%) contrast(93%)
+      drop-shadow(0 0 3px var(--color-after-glow))
+      drop-shadow(0 0 7px var(--color-after-glow));
+  }
+}
+
+/* @keyframes image-glow {
+  0% {
+    filter: drop-shadow(0 0 5px var(--color-initial-glow))
+      drop-shadow(0 0 10px var(--color-initial-glow))
+      drop-shadow(0 0 20px var(--color-initial-glow))
+      drop-shadow(0 0 40px var(--color-initial-glow));
+  }
+  100% {
+    filter: drop-shadow(0 0 10px var(--color-after-glow))
+      drop-shadow(0 0 20px var(--color-after-glow))
+      drop-shadow(0 0 40px var(--color-after-glow))
+      drop-shadow(0 0 80px var(--color-after-glow));
+  }
+} */
+
+/* @keyframes glow {
+  0% {
+    text-shadow: 0 0 5px var(--color-initial-glow),
+      0 0 10px var(--color-initial-glow), 0 0 20px var(--color-initial-glow),
+      0 0 40px var(--color-initial-glow), 0 0 80px var(--color-initial-glow);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--color-after-glow),
+      0 0 20px var(--color-after-glow), 0 0 40px var(--color-after-glow),
+      0 0 80px var(--color-after-glow), 0 0 160px var(--color-after-glow);
+  }
+} */
 
 @utility nav-petal {
   width: 40px; /* control size */
@@ -17,28 +107,3 @@
   box-sizing: border-box;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* display: block;
-  width: 126px;
-  height: 180px;
-  background-color: red;
-
-  border-radius: 40% 40% 60% 60% / 5% 5% 75% 75%; */
-
-/* @utility teardrop {
-  width: 160px;
-  height: 230px;
-  background: #e46608;
-
-  -webkit-clip-path: path(
-    "M50 0
-     C25 15, 10 50, 50 100
-     C90 50, 75 15, 50 0
-     Z"
-  );
-  clip-path: path(
-    "M50 0
-     C25 15, 10 50, 50 100
-     C90 50, 75 15, 50 0
-     Z"
-  );
-} */

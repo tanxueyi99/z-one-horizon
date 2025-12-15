@@ -1,51 +1,34 @@
 import TearDrop from "./shapes/TearDrop";
-import LeftLogo from "../assets/imgs/Left_transparent.png";
-import RightLogo from "../assets/imgs/Right_transparent.png";
+
 import HeroContainer from "./utility/HeroContainer";
+import TopNavigation from "./TopNavigation";
+import "animate.css";
 
 function HeroNavigation() {
   return (
     <>
       <HeroContainer>
-        <nav className="absolute top-0 left-0 right-0 z-10">
-          <div className="flex justify-between">
-            <div className="text-4xl text-[#BB6F00]">Home</div>
-            <div className="flex justify-center items-center">
-              <img
-                className="w-12 h-12"
-                src={LeftLogo}
-                alt="LeftLogo"
-                onClick={() => alert("Logo")}
-              />
-              <div>SPIRIT</div>
-              <img
-                className="w-12 h-12"
-                src={RightLogo}
-                alt="RightLogo"
-                onClick={() => alert("Logo")}
-              />
+        <TopNavigation />
+        <div className="flex h-screen bg-blue-400 -z-10">
+          <div className="w-[50vw] flex items-center justify-center">
+            <div className="flex items-center justify-center  w-100 h-100 m-10 pt-30">
+              <div className="absolute">
+                <div className="nav-ring"></div>
+              </div>
+
+              <div className="absolute">
+                <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
+              </div>
+              <div className="absolute rotate-120">
+                <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
+              </div>
+              <div className="absolute rotate-240">
+                <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
+              </div>
             </div>
-            <div className="text-4xl text-[#F5AC00]">Contact</div>
-          </div>
-        </nav>
-
-        <div className="flex items-center justify-center h-screen bg-blue-400">
-          <div className="absolute">
-            <div className="nav-ring"></div>
           </div>
 
-          <div className="absolute">
-            <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
-            {/* <div className="nav-ring"></div> */}
-          </div>
-          <div className="absolute rotate-120">
-            <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
-            {/* <div className="nav-ring"></div> */}
-          </div>
-          <div className="absolute rotate-240">
-            <TearDrop className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-64" />
-            {/* <div className="nav-ring"></div> */}
-          </div>
+          <div className=" w-[50vw]"></div>
         </div>
 
         <svg
