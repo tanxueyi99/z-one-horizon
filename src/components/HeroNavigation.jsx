@@ -137,8 +137,8 @@ function HeroNavigation() {
             </div>
           </div>
 
-          <div className="w-1/2 flex items-center justify-center">
-            <div className="absolute" onClick={handleOrangeTearClick}></div>
+          <div className="w-1/2 flex items-center justify-center bg-white">
+            <div className=""></div>
           </div>
         </div>
 
