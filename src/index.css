@@ -9,6 +9,8 @@
   --color-blue-glass-text: hsla(208, 99%, 79%, 1);
   --color-green-glass-text: hsla(126, 100%, 79%, 1);
 
+  --bg-orange-glass: hsla(64, 86%, 79%, 1);
+
   --color-initial-glow: hsla(64, 86%, 49%, 1);
   --color-after-glow: hsla(64, 86%, 55%, 1);
 
@@ -24,7 +26,24 @@
   --color-orange-glass: #d7e711;
   --color-blue-glass: #017ae7;
   --color-green-glass: #00e717;
+
+  --color-backdrop-orange: #FEFFBA;
 }
+
+@utility custom-orange-gradient{
+  background: #F1F89B;
+    background: linear-gradient(180deg, rgba(241, 248, 155, 1) 0%, rgba(241, 248, 155, 1) 60%, rgba(191, 196, 120, 1) 100%);
+
+/* background: #eef783;
+background: linear-gradient(180deg, rgba(238, 247, 131, 1) 0%, rgba(238, 247, 131, 1) 50%, rgba(238, 247, 131, 1) 100%); */
+
+/* background: #F1F89B;
+background: linear-gradient(180deg, rgba(241, 248, 155, 1) 0%, rgba(241, 248, 155, 1) 50%, rgba(215, 231, 17, 1) 100%); */
+    /* background: #effab9;
+background: linear-gradient(180deg, rgba(239, 250, 185, 1) 0%, rgba(239, 250, 185, 1) 50%, rgba(191, 204, 149, 1) 100%); */
+}
+
+
 
 @utility neon-glow-orange {
   text-shadow: 0 0 5px var(--color-orange-start-glow),

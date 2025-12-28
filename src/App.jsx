@@ -1,4 +1,5 @@
 import HeroNavigation from "./components/HeroNavigation";
+import DigitalAssets from "./components/DigitalAssets";
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       {/* <p>Hi</p>
       <h1>hello</h1> */}
       <HeroNavigation />
+      <DigitalAssets />
     </>
   );
 }

@@ -138,11 +138,14 @@ function HeroNavigation() {
           </div>
 
           <div className="w-1/2 flex items-center justify-center bg-white">
-            <div className=""></div>
+            <div className=" bg-backdrop-orange w-50 h-50">
+              hello
+              <div className="w-30 h-30 custom-orange-gradient">hi</div>
+            </div>
           </div>
         </div>
 
-        <svg
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-3.14 -0.225 2.28 4.225"
           width="200"
@@ -164,8 +167,8 @@ function HeroNavigation() {
             d="m -0.9 3.2 q -0.1 0.8 -1.1 0.8 q -1 0 -1.1 -0.8 q -0.2 -1.2 0.6 -2.95 q 0.5 -0.95 1 0 q 0.8 1.75 0.6 2.95"
             fill="url(#texture)"
           />
-        </svg>
-
+        </svg> */}
+        {/* 
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-3.14 -0.225 2.28 4.225"
@@ -186,9 +189,9 @@ function HeroNavigation() {
             d="m -0.9 3.2 q -0.1 0.8 -1.1 0.8 q -1 0 -1.1 -0.8 q -0.2 -1.2 0.6 -2.95 q 0.5 -0.95 1 0 q 0.8 1.75 0.6 2.95"
             fill="url(#imgTexture)"
           />
-        </svg>
+        </svg> */}
 
-        <svg
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-3.14 -0.225 2.28 4.225"
           width="100"
@@ -208,9 +211,9 @@ function HeroNavigation() {
             d="m -0.9 3.2 q -0.1 0.8 -1.1 0.8 q -1 0 -1.1 -0.8 q -0.2 -1.2 0.6 -2.95 q 0.5 -0.95 1 0 q 0.8 1.75 0.6 2.95"
             fill="url(#imgTexture)"
           />
-        </svg>
+        </svg> */}
 
-        <svg
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-3.14 -0.225 2.28 4.225"
           width="100"
@@ -232,7 +235,7 @@ function HeroNavigation() {
             fill="#000000"
             filter="url(#noise)"
           />
-        </svg>
+        </svg> */}
 
         {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="-3.14 -0.225 2.28 4.225">
         <path
