@@ -2,6 +2,7 @@ import { useState } from "react";
 import DigitalCards from "./DigitalCards";
 import InfiniteCarousel from "./InfiniteCarousel";
 import PopupCard from "./PopUpCard";
+import dragonImg from "../assets/imgs/Cute_Dragon.jpg";
 
 function DigitalAssets() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -84,7 +85,7 @@ function DigitalAssets() {
     >
       <DigitalCards
         onCardClick={handleCardClick}
-        imageSrc="./src/assets/imgs/Cute_Dragon.jpg"
+        imageSrc={dragonImg}
         title="@Cute Dragon"
         description="Dragon cute"
       />
