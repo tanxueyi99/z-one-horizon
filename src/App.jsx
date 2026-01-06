@@ -8,7 +8,7 @@ function App() {
       {/* <p>Hi</p>
       <h1>hello</h1> */}
       {/* <HeroNavigation /> */}
-      {/* <ThreeDimension /> */}
+      <ThreeDimension />
       <DigitalAssets />
       <BestPick />
     </>
