@@ -137,7 +137,7 @@ function HeroNavigation() {
             </div>
           </div>
 
-          <div className="w-1/2 flex items-center justify-center bg-white">
+          <div className="w-1/2 flex items-center justify-center  bg-blue-400">
             <div className=" bg-backdrop-orange w-50 h-50">
               hello
               <div className="w-30 h-30 custom-orange-gradient">hi</div>

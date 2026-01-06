@@ -104,12 +104,12 @@ function InfiniteCarousel({
     >
       {/* Left Arrow Button */}
       <button
-        className="h-20 w-20 cursor-pointer flex justify-center items-center hover:bg-gray-800 rounded-full transition-colors z-10 flex-shrink-0"
+        className="h-20 w-20 cursor-pointer flex justify-center items-center hover:bg-amber-300 rounded-full transition-colors z-10 flex-shrink-0"
         onClick={handleLeftClick}
         aria-label="Previous"
       >
         <svg
-          className="w-10 h-10 -scale-x-100 text-white"
+          className="w-10 h-10 -scale-x-100 text-black"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -154,12 +154,12 @@ function InfiniteCarousel({
 
       {/* Right Arrow Button */}
       <button
-        className="h-20 w-20 cursor-pointer flex justify-center items-center hover:bg-gray-800 rounded-full transition-colors z-10 flex-shrink-0"
+        className="h-20 w-20 cursor-pointer flex justify-center items-center hover:bg-amber-300 rounded-full transition-colors z-10 flex-shrink-0"
         onClick={handleRightClick}
         aria-label="Next"
       >
         <svg
-          className="w-10 h-10 text-white"
+          className="w-10 h-10 text-black"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

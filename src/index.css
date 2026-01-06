@@ -5,6 +5,11 @@
 @theme {
   --font-amiri: "Amiri", serif;
 
+--color-orange-glass-bg: hsla(64, 86%, 79%, 1);
+
+--color-orange-bg-start-glow: hsla(64, 86%, 79%, 1);
+--color-orange-bg-end-glow: hsla(64, 86%, 79%, 1);
+
   --color-orange-glass-text: hsla(64, 86%, 79%, 1);
   --color-blue-glass-text: hsla(208, 99%, 79%, 1);
   --color-green-glass-text: hsla(126, 100%, 79%, 1);
@@ -43,7 +48,31 @@ background: linear-gradient(180deg, rgba(241, 248, 155, 1) 0%, rgba(241, 248, 15
 background: linear-gradient(180deg, rgba(239, 250, 185, 1) 0%, rgba(239, 250, 185, 1) 50%, rgba(191, 204, 149, 1) 100%); */
 }
 
+@utility neon-glow-orange-bg {
+  background-color: var(--color-orange-glass-bg);
+  box-shadow: 0 0 3px var(--color-orange-bg-start-glow),
+    0 0 6px var(--color-orange-bg-start-glow),
+    0 0 12px var(--color-orange-bg-start-glow),
+    0 0 20px var(--color-orange-bg-start-glow);
+  animation: bg-glow-orange 1s infinite alternate;
+}
 
+@keyframes bg-glow-orange {
+  0% {
+    background-color: var(--color-orange-glass-bg);
+    box-shadow: 0 0 3px var(--color-orange-bg-start-glow),
+      0 0 6px var(--color-orange-bg-start-glow),
+      0 0 12px var(--color-orange-bg-start-glow),
+      0 0 20px var(--color-orange-bg-start-glow);
+  }
+  100% {
+    background-color: var(--color-orange-glass-bg);
+    box-shadow: 0 0 5px var(--color-orange-bg-end-glow),
+      0 0 10px var(--color-orange-bg-end-glow),
+      0 0 20px var(--color-orange-bg-end-glow),
+      0 0 40px var(--color-orange-bg-end-glow);
+  }
+}
 
 @utility neon-glow-orange {
   text-shadow: 0 0 5px var(--color-orange-start-glow),
@@ -129,7 +158,7 @@ background: linear-gradient(180deg, rgba(239, 250, 185, 1) 0%, rgba(239, 250, 18
     drop-shadow(0 0 2px var(--color-orange-start-glow))
     drop-shadow(0 0 5px var(--color-orange-start-glow))
     drop-shadow(0 0 10px var(--color-orange-start-glow));
-  animation: image-glow 1s infinite alternate;
+  animation: image-glow-orange 1s infinite alternate;
 }
 
 @keyframes image-glow-orange {
