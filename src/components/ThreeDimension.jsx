@@ -3,7 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 
 function Model({ onCubeClick }) {
-  const { scene } = useGLTF("/ThreeD.glb");
+  // For Vite, use import.meta.env.BASE_URL instead of process.env.PUBLIC_URL
+  const { scene } = useGLTF(`${import.meta.env.BASE_URL}ThreeD.glb`);
 
   useEffect(() => {
     // Traverse through all objects in the scene
