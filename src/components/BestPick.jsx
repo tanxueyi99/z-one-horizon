@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BGImage from "../assets/imgs/ProjectorBG.jpeg";
+import BGImage from "../assets/imgs/ProjectorWhite.png";
 
 const BestPick = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,7 +41,7 @@ const BestPick = () => {
     <div className="min-h-screen bg-black text-white p-8 flex flex-col relative overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${BGImage})`,
           zIndex: 0,
@@ -49,7 +49,7 @@ const BestPick = () => {
       ></div>
 
       {/* Overlay to darken background */}
-      <div className="absolute inset-0 bg-black/50" style={{ zIndex: 1 }}></div>
+      {/* <div className="absolute inset-0 bg-black/50" style={{ zIndex: 1 }}></div> */}
 
       {/* Circular Light Effect 2 - Bottom Left - Fixed position */}
       <div

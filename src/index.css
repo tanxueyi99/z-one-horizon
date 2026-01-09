@@ -7,8 +7,8 @@
 
 --color-orange-glass-bg: hsla(64, 86%, 79%, 1);
 
---color-orange-bg-start-glow: hsla(64, 86%, 79%, 1);
---color-orange-bg-end-glow: hsla(64, 86%, 79%, 1);
+--color-orange-bg-start-glow: hsla(64, 86%, 59%, 1);
+--color-orange-bg-end-glow: hsla(64, 86%, 69%, 1);
 
   --color-orange-glass-text: hsla(64, 86%, 79%, 1);
   --color-blue-glass-text: hsla(208, 99%, 79%, 1);
@@ -49,28 +49,25 @@ background: linear-gradient(180deg, rgba(239, 250, 185, 1) 0%, rgba(239, 250, 18
 }
 
 @utility neon-glow-orange-bg {
-  background-color: var(--color-orange-glass-bg);
-  box-shadow: 0 0 3px var(--color-orange-bg-start-glow),
-    0 0 6px var(--color-orange-bg-start-glow),
-    0 0 12px var(--color-orange-bg-start-glow),
-    0 0 20px var(--color-orange-bg-start-glow);
-  animation: bg-glow-orange 1s infinite alternate;
+  box-shadow: inset 0 0 3px var(--color-orange-bg-start-glow),
+    inset 0 0 6px var(--color-orange-bg-start-glow),
+    inset 0 0 12px var(--color-orange-bg-start-glow),
+    inset 0 0 20px var(--color-orange-bg-start-glow);
+  animation: bg-glow-orange 2s ease-in-out infinite alternate;
 }
 
 @keyframes bg-glow-orange {
   0% {
-    background-color: var(--color-orange-glass-bg);
-    box-shadow: 0 0 3px var(--color-orange-bg-start-glow),
-      0 0 6px var(--color-orange-bg-start-glow),
-      0 0 12px var(--color-orange-bg-start-glow),
-      0 0 20px var(--color-orange-bg-start-glow);
+    box-shadow: inset 0 0 3px var(--color-orange-bg-start-glow),
+      inset 0 0 6px var(--color-orange-bg-start-glow),
+      inset 0 0 12px var(--color-orange-bg-start-glow),
+      inset 0 0 20px var(--color-orange-bg-start-glow);
   }
   100% {
-    background-color: var(--color-orange-glass-bg);
-    box-shadow: 0 0 5px var(--color-orange-bg-end-glow),
-      0 0 10px var(--color-orange-bg-end-glow),
-      0 0 20px var(--color-orange-bg-end-glow),
-      0 0 40px var(--color-orange-bg-end-glow);
+    box-shadow: inset 0 0 5px var(--color-orange-bg-end-glow),
+      inset 0 0 10px var(--color-orange-bg-end-glow),
+      inset 0 0 20px var(--color-orange-bg-end-glow),
+      inset 0 0 40px var(--color-orange-bg-end-glow);
   }
 }
 

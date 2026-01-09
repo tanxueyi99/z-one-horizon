@@ -2,6 +2,7 @@ import HeroNavigation from "./components/HeroNavigation";
 import DigitalAssets from "./components/DigitalAssets";
 import BestPick from "./components/BestPick";
 import ThreeDimension from "./components/ThreeDimension";
+import ContactUs from "./components/ContactUs";
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
       <ThreeDimension />
       <DigitalAssets />
       <BestPick />
+      <ContactUs />
     </>
   );
 }

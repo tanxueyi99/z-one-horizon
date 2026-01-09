@@ -116,17 +116,21 @@ function DigitalAssets() {
 
   return (
     <div className="bg-amber-200 min-h-screen">
-      <div className="absolute text-5xl text-orange-glass-text p-5 font-amiri">
+      {/* <div className="absolute text-5xl text-orange-glass-text p-5 font-amiri">
         Digital Assets
-      </div>
+      </div> */}
 
-      <div className="bg-black flex flex-col justify-center gap-8 h-screen">
+      <div className="bg-black flex flex-col justify-evenly h-screen">
+        <div className="text-5xl px-5 text-orange-glass-text font-amiri">
+          Digital Assets
+        </div>
         <InfiniteCarousel
           items={demoItems}
           itemWidth={350}
           gap="5vw"
           height="h-70"
-          bgColour="neon-glow-orange-bg"
+          //   bgColour="neon-glow-orange-bg"
+          bgColour="bg-orange-glass-text"
         />
         <InfiniteCarousel
           items={demoItems1}
