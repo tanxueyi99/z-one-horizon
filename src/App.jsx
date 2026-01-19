@@ -1,8 +1,11 @@
 import HeroNavigation from "./components/HeroNavigation";
 import DigitalAssets from "./components/DigitalAssets";
-import BestPick from "./components/BestPick";
+import BestPickBK from "./components/BestPickBK";
 import ThreeDimension from "./components/ThreeDimension";
 import ContactUs from "./components/ContactUs";
+import BestPick from "./components/BestPick";
+import SearchGallery from "./components/SearchGallery";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -11,8 +14,11 @@ function App() {
       {/* <HeroNavigation /> */}
       <ThreeDimension />
       <DigitalAssets />
+      {/* <BestPickBK /> */}
       <BestPick />
+      <SearchGallery />
       <ContactUs />
+      <Footer />
     </>
   );
 }

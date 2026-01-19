@@ -26,20 +26,20 @@ function PopupCard({ isOpen, onClose, title, imageSrc }) {
     >
       {/* border-[0.5px] border-orange-glass-text */}
       <div
-        className="border-[0.5px] border-orange-glass-text bg-[radial-gradient(circle_at_50%_60%,_rgba(255,136,0,1)_0%,_#0a0a0a_70%)]  rounded-lg shadow-2xl max-w-6xl max-h-[90vh] min-h-[80vh] w-full mx-4 overflow-hidden relative flex flex-col"
+        className="border-[0.5px] border-amber-200 bg-[radial-gradient(circle_at_50%_60%,_rgba(255,136,0,1)_0%,_#0a0a0a_70%)]  rounded-lg shadow-2xl max-w-6xl max-h-[90vh] min-h-[80vh] w-full mx-4 overflow-hidden relative flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header with title and close button */}
         <div className="relative p-4 pb-2">
-          <h2 className="text-5xl text-orange-glass-text text-center font-bold">
+          <h2 className="text-5xl text-amber-200 text-center font-bold">
             {title}
           </h2>
-          <p className="text-md text-orange-glass-text text-center mt-1 font-bold">
+          <p className="text-md text-amber-200 text-center mt-1 font-bold">
             Subtitle or description text here
           </p>
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 transition-colors"
+            className="absolute top-4 right-4 text-gray-500 hover:text-amber-200 transition-colors"
           >
             <svg
               className="w-6 h-6"
@@ -62,19 +62,13 @@ function PopupCard({ isOpen, onClose, title, imageSrc }) {
           {/* Left side text */}
           <div className="flex flex-col justify-center gap-20 w-48 flex-shrink-0">
             <div>
-              <p className="text-4xl font-bold text-orange-glass-text">
-                -Animation
-              </p>
+              <p className="text-4xl font-bold text-amber-200">-Animation</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-orange-glass-text">
-                -Malaysia
-              </p>
+              <p className="text-4xl font-bold text-amber-200">-Malaysia</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-orange-glass-text">
-                -Yearly
-              </p>
+              <p className="text-4xl font-bold text-amber-200">-Yearly</p>
             </div>
           </div>
 
@@ -100,19 +94,13 @@ function PopupCard({ isOpen, onClose, title, imageSrc }) {
           {/* Right side text */}
           <div className="flex flex-col justify-center gap-20 w-48 flex-shrink-0">
             <div>
-              <p className="text-4xl font-bold text-orange-glass-text">
-                -Animation
-              </p>
+              <p className="text-4xl font-bold text-amber-200">-Animation</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-orange-glass-text">
-                -Animation
-              </p>
+              <p className="text-4xl font-bold text-amber-200">-Animation</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-orange-glass-text">
-                -Animation
-              </p>
+              <p className="text-4xl font-bold text-amber-200">-Animation</p>
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ function DigitalAssets() {
   const demoItems = [
     <div
       key={1}
-      className="bg-blue-800 h-full w-full flex items-center justify-center text-white text-2xl font-bold"
+      className="h-full w-full flex items-center justify-center text-white text-2xl font-bold"
     >
       <DigitalCards
         onCardClick={handleCardClick}
@@ -32,7 +32,7 @@ function DigitalAssets() {
     </div>,
     <div
       key={2}
-      className="bg-amber-200 h-full w-full flex items-center justify-center text-gray-800 text-2xl font-bold"
+      className="h-full w-full flex items-center justify-center text-gray-800 text-2xl font-bold"
     >
       <DigitalCards
         onCardClick={handleCardClick}
@@ -43,7 +43,7 @@ function DigitalAssets() {
     </div>,
     <div
       key={3}
-      className="bg-cyan-300 h-full w-full flex items-center justify-center text-gray-800 text-2xl font-bold"
+      className="h-full w-full flex items-center justify-center text-gray-800 text-2xl font-bold"
     >
       <DigitalCards
         onCardClick={handleCardClick}
@@ -81,7 +81,7 @@ function DigitalAssets() {
   const demoItems1 = [
     <div
       key={1}
-      className="bg-blue-800 h-full w-full flex items-center justify-center text-white text-2xl font-bold"
+      className="h-full w-full flex items-center justify-center text-white text-2xl font-bold"
     >
       <DigitalCards
         onCardClick={handleCardClick}
@@ -92,7 +92,7 @@ function DigitalAssets() {
     </div>,
     <div
       key={2}
-      className="bg-amber-200 h-full w-full flex items-center justify-center text-gray-800 text-2xl font-bold"
+      className="h-full w-full flex items-center justify-center text-gray-800 text-2xl font-bold"
     >
       <DigitalCards
         onCardClick={handleCardClick}
@@ -103,7 +103,7 @@ function DigitalAssets() {
     </div>,
     <div
       key={3}
-      className="bg-cyan-300 h-full w-full flex items-center justify-center text-gray-800 text-2xl font-bold"
+      className="h-full w-full flex items-center justify-center text-gray-800 text-2xl font-bold"
     >
       <DigitalCards
         onCardClick={handleCardClick}
@@ -116,12 +116,8 @@ function DigitalAssets() {
 
   return (
     <div className="bg-amber-200 min-h-screen">
-      {/* <div className="absolute text-5xl text-orange-glass-text p-5 font-amiri">
-        Digital Assets
-      </div> */}
-
       <div className="bg-black flex flex-col justify-evenly h-screen">
-        <div className="text-5xl px-5 text-orange-glass-text font-amiri">
+        <div className="text-5xl px-5 text-amber-200 font-amiri">
           Digital Assets
         </div>
         <InfiniteCarousel
@@ -129,15 +125,14 @@ function DigitalAssets() {
           itemWidth={350}
           gap="5vw"
           height="h-70"
-          //   bgColour="neon-glow-orange-bg"
-          bgColour="bg-orange-glass-text"
+          bgColour="bg-amber-200"
         />
         <InfiniteCarousel
           items={demoItems1}
           itemWidth={350}
           gap="5vw"
           height="h-70"
-          bgColour="bg-orange-glass-text"
+          bgColour="bg-amber-200"
         />
       </div>
 

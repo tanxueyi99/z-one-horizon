@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-   "homepage": "https://tanxueyi99.github.io/z-one-horizon",
-   
+  "homepage": "https://tanxueyi99.github.io/z-one-horizon",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,6 +17,7 @@
     "@react-three/fiber": "^9.5.0",
     "@tailwindcss/vite": "^4.1.17",
     "animate.css": "^4.1.1",
+    "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwindcss": "^4.1.17",

@@ -7,8 +7,11 @@
 
 --color-orange-glass-bg: hsla(64, 86%, 79%, 1);
 
---color-orange-bg-start-glow: hsla(64, 86%, 59%, 1);
---color-orange-bg-end-glow: hsla(64, 86%, 69%, 1);
+/* --color-orange-bg-start-glow: hsla(64, 86%, 59%, 1);
+--color-orange-bg-end-glow: hsla(64, 86%, 69%, 1); */
+
+--color-orange-bg-start-glow: hsla(48, 96.5%, 58.8%, 1);
+--color-orange-bg-end-glow: hsla(48, 96.5%, 68.8%, 1);
 
   --color-orange-glass-text: hsla(64, 86%, 79%, 1);
   --color-blue-glass-text: hsla(208, 99%, 79%, 1);
