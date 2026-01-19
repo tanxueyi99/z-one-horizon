@@ -38,6 +38,16 @@
   --color-backdrop-orange: #FEFFBA;
 }
 
+/* GPU acceleration for all hover/transition elements in Safari */
+[class*="transition"],
+[class*="hover:"],
+[class*="group"] {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 @utility custom-orange-gradient{
   background: #F1F89B;
     background: linear-gradient(180deg, rgba(241, 248, 155, 1) 0%, rgba(241, 248, 155, 1) 60%, rgba(191, 196, 120, 1) 100%);
