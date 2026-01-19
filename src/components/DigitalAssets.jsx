@@ -116,24 +116,23 @@ function DigitalAssets() {
 
   return (
     <div className="bg-amber-200 min-h-screen">
-      <div className="bg-black flex flex-col justify-evenly h-screen">
-        <div className="text-5xl px-5 text-amber-200 font-amiri">
+      <div className="bg-black flex flex-col min-h-screen py-12">
+        <div className="text-6xl px-5 text-amber-200 font-amiri italic mb-8">
           Digital Assets
         </div>
-        <InfiniteCarousel
-          items={demoItems}
-          itemWidth={350}
-          gap="5vw"
-          height="h-70"
-          bgColour="bg-amber-200"
-        />
-        <InfiniteCarousel
-          items={demoItems1}
-          itemWidth={350}
-          gap="5vw"
-          height="h-70"
-          bgColour="bg-amber-200"
-        />
+
+        <div className="flex-1 flex flex-col justify-center gap-8">
+          <InfiniteCarousel
+            items={demoItems}
+            gap="50px"
+            bgColour="bg-amber-200"
+          />
+          <InfiniteCarousel
+            items={demoItems1}
+            gap="50px"
+            bgColour="bg-amber-200"
+          />
+        </div>
       </div>
 
       {/* Popup rendered at top level */}

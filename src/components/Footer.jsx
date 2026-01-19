@@ -11,6 +11,22 @@ export default function Footer() {
       <div className="relative mx-auto w-full max-w-3xl px-4">
         {/* Oval Background */}
         <div className="relative mx-auto w-full">
+          {/* Glow Layer Behind */}
+          <div
+            className="absolute inset-0"
+            style={{
+              borderRadius: "50% / 100%",
+              borderBottomLeftRadius: 0,
+              borderBottomRightRadius: 0,
+              height: "260px",
+              background:
+                "radial-gradient(ellipse 80% 100% at 50% 50%, rgba(251, 191, 36, 0.6) 0%, rgba(251, 191, 36, 0.3) 50%, rgba(251, 191, 36, 0) 100%)",
+              filter: "blur(20px)",
+              transform: "scale(1.1)",
+            }}
+          />
+
+          {/* Main Oval */}
           <div
             className="absolute inset-0 bg-gradient-radial"
             style={{

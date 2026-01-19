@@ -4,28 +4,28 @@ import { useState, useEffect, useRef } from "react";
  * InfiniteCarousel Component
  *
  * A reusable infinite scrolling carousel with seamless looping
+ * Now with responsive card sizing to always show exactly 3 cards
  *
  * @param {Array} items - Array of JSX elements to display in the carousel
- * @param {number} itemWidth - Width of each item in pixels (default: 320)
- * @param {string} gap - Gap between items, can use any CSS unit (default: "5vw")
+ * @param {number} itemWidth - Base width of each item in pixels (will be overridden by responsive calculation)
+ * @param {string} gap - Gap between items in pixels (default: "40px")
  * @param {string} height - Tailwind height class for the carousel (default: "h-96")
  *
  * @example
- * const myItems = data.map(item => (
- *   <img key={item.id} src={item.url} alt={item.title} className="w-full h-full object-cover" />
- * ));
- *
- * <InfiniteCarousel items={myItems} itemWidth={400} gap="3vw" height="h-[500px]" />
+ * <InfiniteCarousel items={myItems} gap="40px" height="h-[500px]" />
  */
 
 function InfiniteCarousel({
   items = [],
   itemWidth = 320,
-  gap = "5vw",
+  gap = "40px",
   height = "h-96",
   bgColour = "",
 }) {
   const totalItems = items.length;
+  const containerRef = useRef(null);
+  const [responsiveWidth, setResponsiveWidth] = useState(itemWidth);
+  const [responsiveHeight, setResponsiveHeight] = useState(400);
 
   // Return null if no items provided
   if (totalItems === 0) {
@@ -37,6 +37,32 @@ function InfiniteCarousel({
   const [isTransitioning, setIsTransitioning] = useState(true);
   const transitionTimeoutRef = useRef(null);
   const isJumpingRef = useRef(false);
+
+  // Parse gap to number
+  const gapValue = parseInt(gap);
+
+  // Calculate responsive card width and height to always show 3 cards with proper aspect ratio
+  useEffect(() => {
+    const calculateWidth = () => {
+      if (containerRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        // Account for arrow buttons (40px each side = 80px total) and gaps (2 gaps between 3 cards)
+        const arrowSpace = 160; // 80px per arrow button
+        const availableWidth = containerWidth - arrowSpace - gapValue * 2;
+        const calculatedWidth = Math.floor(availableWidth / 3);
+
+        // Maintain 4:3 aspect ratio (landscape cards)
+        const calculatedHeight = Math.floor(calculatedWidth * 0.75);
+
+        setResponsiveWidth(calculatedWidth);
+        setResponsiveHeight(calculatedHeight);
+      }
+    };
+
+    calculateWidth();
+    window.addEventListener("resize", calculateWidth);
+    return () => window.removeEventListener("resize", calculateWidth);
+  }, [gapValue]);
 
   // Duplicate items: [items, items, items, items, items]
   const extendedItems = [
@@ -100,7 +126,9 @@ function InfiniteCarousel({
 
   return (
     <div
-      className={`w-full ${height} flex justify-between items-center ${bgColour}`}
+      ref={containerRef}
+      className={`w-full flex justify-between items-center ${bgColour}`}
+      style={{ height: `${responsiveHeight}px` }}
     >
       {/* Left Arrow Button */}
       <button
@@ -132,9 +160,11 @@ function InfiniteCarousel({
               : ""
           }`}
           style={{
-            transform: `translateX(calc(50% - ${
-              itemWidth / 2
-            }px - ${currentIndex} * (${itemWidth}px + ${gap})))`,
+            transform: `translate3d(calc(50% - ${
+              responsiveWidth / 2
+            }px - ${currentIndex} * (${responsiveWidth}px + ${gap})), 0, 0)`,
+            backfaceVisibility: "hidden",
+            perspective: "1000px",
           }}
         >
           {extendedItems.map((item, index) => (
@@ -142,8 +172,10 @@ function InfiniteCarousel({
               key={index}
               className="h-full shrink-0"
               style={{
-                width: `${itemWidth}px`,
+                width: `${responsiveWidth}px`,
                 marginLeft: index === 0 ? "0" : gap,
+                backfaceVisibility: "hidden",
+                transform: "translateZ(0)",
               }}
             >
               {item}

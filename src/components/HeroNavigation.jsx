@@ -72,7 +72,7 @@ function HeroNavigation() {
                 onClick={() => alert("Logo")}
               />
               <div
-                className={`text-6xl font-amiri pt-5 ${
+                className={`text-6xl font-amiri italic pt-5 ${
                   isOrange
                     ? "neon-glow-orange text-orange-glass-text"
                     : isBlue
